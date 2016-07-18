@@ -74,6 +74,9 @@
                                     <constraint firstAttribute="height" constant="45" id="gNY-I7-CBn"/>
                                 </constraints>
                                 <state key="normal" title="QR"/>
+                                <connections>
+                                    <segue destination="dkV-Ds-8L8" kind="showDetail" identifier="capturarQR" id="u7e-lX-kNU"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6oD-mI-Tyk">
                                 <rect key="frame" x="223" y="610" width="132" height="45"/>
@@ -112,6 +115,95 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Odq-cC-94G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1296.5" y="429.5"/>
+        </scene>
+        <!--Nav Controller-->
+        <scene sceneID="gpf-4F-WqI">
+            <objects>
+                <navigationController id="dkV-Ds-8L8" customClass="QRNavController" customModule="ProyectoFinalv2" customModuleProvider="target" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="AcM-at-EfM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="R6C-JH-QED" kind="relationship" relationship="rootViewController" id="TT0-hC-UdZ"/>
+                        <segue destination="MsY-ic-7Qr" kind="showDetail" identifier="detalle" id="MZi-yD-8Wp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="94d-DC-GK8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1832.5" y="429.5"/>
+        </scene>
+        <!--DisplayVC-->
+        <scene sceneID="jUd-XO-ih3">
+            <objects>
+                <viewController id="MsY-ic-7Qr" customClass="QRDisplayVC" customModule="ProyectoFinalv2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="k6i-6o-in6"/>
+                        <viewControllerLayoutGuide type="bottom" id="6HM-cc-Mjt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zLm-wh-Qo3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hgA-vm-yVc">
+                                <rect key="frame" x="20" y="20" width="335" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="fWU-JY-j5U"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8F8-Hu-aPK">
+                                <rect key="frame" x="0.0" y="63" width="375" height="564"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hgA-vm-yVc" firstAttribute="centerX" secondItem="8F8-Hu-aPK" secondAttribute="centerX" id="5JM-rt-jBu"/>
+                            <constraint firstItem="8F8-Hu-aPK" firstAttribute="top" secondItem="hgA-vm-yVc" secondAttribute="bottom" constant="8" symbolic="YES" id="8LQ-Rj-iRb"/>
+                            <constraint firstItem="6HM-cc-Mjt" firstAttribute="top" secondItem="8F8-Hu-aPK" secondAttribute="bottom" constant="40" id="F7S-7N-QNA"/>
+                            <constraint firstItem="hgA-vm-yVc" firstAttribute="leading" secondItem="zLm-wh-Qo3" secondAttribute="leadingMargin" constant="4" id="aPS-w6-s6Z"/>
+                            <constraint firstAttribute="trailing" secondItem="8F8-Hu-aPK" secondAttribute="trailing" id="aRz-6W-tVr"/>
+                            <constraint firstItem="hgA-vm-yVc" firstAttribute="top" secondItem="k6i-6o-in6" secondAttribute="bottom" id="bEQ-0Z-yoL"/>
+                            <constraint firstItem="8F8-Hu-aPK" firstAttribute="leading" secondItem="zLm-wh-Qo3" secondAttribute="leading" id="vv2-gu-Ra4"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="lblAddress" destination="hgA-vm-yVc" id="782-Ml-sex"/>
+                        <outlet property="web" destination="8F8-Hu-aPK" id="LKT-AP-bSl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OuL-2y-Xfj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2378.5" y="722.5"/>
+        </scene>
+        <!--Capturar QR-->
+        <scene sceneID="nJI-gE-jEz">
+            <objects>
+                <viewController id="R6C-JH-QED" customClass="QRReaderVC" customModule="ProyectoFinalv2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wrg-iC-Tvp"/>
+                        <viewControllerLayoutGuide type="bottom" id="nDb-gL-i4H"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EaT-Sc-mEc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Capturar QR" id="saj-TJ-Ob2">
+                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="BcN-nD-IdV">
+                            <connections>
+                                <segue destination="Idg-Sx-ISo" kind="showDetail" identifier="regresaMapa" id="9hW-zW-VbU"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="liL-IA-fci" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2378.5" y="-80.5"/>
         </scene>
         <!--Crear RutaVC-->
         <scene sceneID="zdM-g7-ZCX">
@@ -218,4 +310,7 @@
             <point key="canvasLocation" x="791.5" y="429.5"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="9hW-zW-VbU"/>
+    </inferredMetricsTieBreakers>
 </document>
