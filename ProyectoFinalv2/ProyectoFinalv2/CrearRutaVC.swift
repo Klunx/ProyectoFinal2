@@ -72,6 +72,7 @@ class CrearRutaVC: UIViewController,UIImagePickerControllerDelegate, UINavigatio
         do {
             let rutaEntidad2 = try self.contexto?.executeFetchRequest(peticion!)
             if (rutaEntidad2?.count > 0) {
+                alertaValidacion("Una ruta con este titulo ya existe.")
                 validationFlag = false
             }
         }

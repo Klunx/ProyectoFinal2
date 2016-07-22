@@ -16,7 +16,7 @@
     <fetchRequest name="obtenerRuta" entity="Ruta" predicateString="titulo == $titulo"/>
     <fetchRequest name="obtenerRutas" entity="Ruta"/>
     <elements>
-        <element name="Ruta" positionX="-63" positionY="-18" width="128" height="105"/>
         <element name="Punto" positionX="-54" positionY="9" width="128" height="120"/>
+        <element name="Ruta" positionX="-63" positionY="-18" width="128" height="105"/>
     </elements>
 </model>

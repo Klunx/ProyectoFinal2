@@ -8,6 +8,7 @@
 
 import UIKit
 import MapKit
+import CoreData
 import CoreLocation
 
 class MapLocatorVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
@@ -15,7 +16,8 @@ class MapLocatorVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelega
     var ruta: Ruta?
     var selectedAnnotationTitle: String?
     var selectedImage : UIImage?
-
+    var contexto: NSManagedObjectContext? = nil
+    
     @IBOutlet weak var lblTituloRuta: UILabel!
     @IBOutlet weak var mapa: MKMapView!
     
@@ -60,6 +62,8 @@ class MapLocatorVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelega
 
         // Do any additional setup after loading the view.
         // Inicializar mapa.
+        self.contexto = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+
         self.locationManager.delegate = self
         self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
         self.locationManager.requestWhenInUseAuthorization()
@@ -127,6 +131,7 @@ class MapLocatorVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelega
                 self.ruta!.agregarElemento(punto)
                 let elementoMap = self.convertirMKMapItem(punto)
                 self.anotaPunto(elementoMap)
+                self.guardarPunto(punto)
                 self.obtenerRuta()
                 
             }));
@@ -141,6 +146,42 @@ class MapLocatorVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelega
         mapa.addAnnotation(anota)
     }
     
+    /*
+     * guardarPunto.
+     * Recibe un objecto de tipo punto y almacenara el punto en la base de datos.
+     */
+    func guardarPunto(punto: Punto) {
+        let rutaEntidad = NSEntityDescription.entityForName("Ruta", inManagedObjectContext: self.contexto!)
+        let peticion = rutaEntidad?.managedObjectModel.fetchRequestFromTemplateWithName("obtenerRuta", substitutionVariables: ["titulo": (ruta?.titulo)!])
+        do {
+            let rutaEntidad2 = try self.contexto?.executeFetchRequest(peticion!)
+            let updateRuta = rutaEntidad2![0] as! NSManagedObject
+            
+            let puntoNuevoEntidad = NSEntityDescription.insertNewObjectForEntityForName("Punto", inManagedObjectContext: self.contexto!)
+            
+            puntoNuevoEntidad.setValue(punto.titulo, forKey: "titulo")
+            puntoNuevoEntidad.setValue(punto.anotacion.latitude, forKey: "latitud")
+            puntoNuevoEntidad.setValue(punto.anotacion.longitude, forKey: "longitud")
+            
+            var puntoEntidades = Set<NSObject>()
+            puntoEntidades.insert(puntoNuevoEntidad)
+            updateRuta.setValue(puntoEntidades, forKey: "tiene")
+            
+            do {
+                try self.contexto?.save()
+            }
+            catch {
+                
+            }
+
+        } catch {
+        
+        }
+    }
+    
+    /*
+     * Crear un MapItem a partir de un objeto punto.
+     */
     func convertirMKMapItem(coordenada : Punto) -> MKMapItem {
         let puntoLugar = MKPlacemark(coordinate: coordenada.anotacion, addressDictionary: nil )
         let origen = MKMapItem(placemark: puntoLugar)
@@ -148,6 +189,9 @@ class MapLocatorVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelega
         return origen
     }
     
+    /**
+     * Obtener una ruta con base a los objetos punto.
+     */
     func obtenerRuta() {
         
         let elementos = self.ruta!.puntosEnLaRuta.count
@@ -177,7 +221,6 @@ class MapLocatorVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelega
         for ruta in respuesta.routes {
             self.mapa.addOverlay(ruta.polyline, level: MKOverlayLevel.AboveRoads)
         }
-        
         let centro = self.ruta!.puntosEnLaRuta.last!.anotacion
         let region = MKCoordinateRegionMakeWithDistance(centro, 0.001, 0.001)
         self.mapa.setRegion(region, animated: true)
@@ -199,12 +242,10 @@ class MapLocatorVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelega
     }
     
     func mapView(mapView: MKMapView, didSelectAnnotationView view: MKAnnotationView) {
-        
         if let annotation = view.annotation {
             self.selectedAnnotationTitle = annotation.title!
         }
     }
-    
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
         self.selectedImage = image
