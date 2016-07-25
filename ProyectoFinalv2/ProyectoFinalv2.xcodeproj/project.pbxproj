@@ -22,6 +22,7 @@
 		EEDA3F971D3D0C7E009E6597 /* QRReaderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDA3F961D3D0C7E009E6597 /* QRReaderVC.swift */; };
 		EEDA3F991D3D0C92009E6597 /* QRDisplayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDA3F981D3D0C92009E6597 /* QRDisplayVC.swift */; };
 		EEDA3F9B1D3D0CBF009E6597 /* QRNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDA3F9A1D3D0CBF009E6597 /* QRNavController.swift */; };
+		EEF04F5A1D463AC400B17EFD /* CargarRutaTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF04F591D463AC400B17EFD /* CargarRutaTVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		EEDA3F961D3D0C7E009E6597 /* QRReaderVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRReaderVC.swift; sourceTree = "<group>"; };
 		EEDA3F981D3D0C92009E6597 /* QRDisplayVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRDisplayVC.swift; sourceTree = "<group>"; };
 		EEDA3F9A1D3D0CBF009E6597 /* QRNavController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRNavController.swift; sourceTree = "<group>"; };
+		EEF04F591D463AC400B17EFD /* CargarRutaTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CargarRutaTVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 				EEDA3F961D3D0C7E009E6597 /* QRReaderVC.swift */,
 				EEDA3F981D3D0C92009E6597 /* QRDisplayVC.swift */,
 				EEDA3F9A1D3D0CBF009E6597 /* QRNavController.swift */,
+				EEF04F591D463AC400B17EFD /* CargarRutaTVC.swift */,
 			);
 			path = ProyectoFinalv2;
 			sourceTree = "<group>";
@@ -291,6 +294,7 @@
 				EEDA3F991D3D0C92009E6597 /* QRDisplayVC.swift in Sources */,
 				EEDA3F8F1D3CF3D1009E6597 /* CrearRutaVC.swift in Sources */,
 				EEDA3F5E1D3CE040009E6597 /* AppDelegate.swift in Sources */,
+				EEF04F5A1D463AC400B17EFD /* CargarRutaTVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
