@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MapKit
 import CoreData
 
 class CargarRutaTVC: UITableViewController {
@@ -112,8 +113,19 @@ class CargarRutaTVC: UITableViewController {
         let mapLocation = segue.destinationViewController as! MapLocatorVC
         let indexPath = self.tableView.indexPathForSelectedRow
         let rutaCargada = self.rutas[indexPath!.row]
-        let ruta = Ruta(titulo: (rutaCargada.valueForKey("titulo") as? String)!,
-            descripcion: (rutaCargada.valueForKey("descripcion") as? String)!)
+        let titulo = rutaCargada.valueForKey("titulo") as? String!
+        let desc = rutaCargada.valueForKey("descripcion") as? String!
+
+        let ruta = Ruta(titulo: titulo!, descripcion: desc!)
+        
+        let puntosCargados = rutaCargada.valueForKey("tiene") as? Set<NSObject>
+        for puntoCargado in puntosCargados! {
+            let puntoCoor = CLLocationCoordinate2D(latitude: (puntoCargado.valueForKey("latitud") as? Double)!, longitude: (puntoCargado.valueForKey("longitud") as? Double)!)
+            let puntoTitulo = puntoCargado.valueForKey("titulo") as? String!
+            let punto = Punto(anotacion: puntoCoor, titulo: puntoTitulo!)
+            ruta.puntosEnLaRuta.append(punto)
+        }
+        
         mapLocation.ruta = ruta
     }
 

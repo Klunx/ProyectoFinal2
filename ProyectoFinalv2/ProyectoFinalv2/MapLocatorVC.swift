@@ -164,6 +164,10 @@ class MapLocatorVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelega
             puntoNuevoEntidad.setValue(punto.anotacion.longitude, forKey: "longitud")
             
             var puntoEntidades = Set<NSObject>()
+            let puntosCargados = updateRuta.valueForKey("tiene") as? Set<NSObject>
+            for puntoCargado in puntosCargados! {
+                puntoEntidades.insert(puntoCargado)
+            }
             puntoEntidades.insert(puntoNuevoEntidad)
             updateRuta.setValue(puntoEntidades, forKey: "tiene")
             
