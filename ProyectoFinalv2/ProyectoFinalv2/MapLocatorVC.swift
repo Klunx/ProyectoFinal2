@@ -24,11 +24,12 @@ class MapLocatorVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelega
     private let locationManager = CLLocationManager()
     private let myPicker = UIImagePickerController()
     
+    // Iniciar Realidad Aumentada.
     @IBAction func iniciaRA() {
         iniciaRAG()
-        
     }
     
+    // Tomar foto.
     @IBAction func tomarFoto() {
         if (self.selectedAnnotationTitle == nil || self.selectedAnnotationTitle == "") {
             let alertaErrorFotografia = UIAlertController(title: "Error", message: "Selecciona un Pin", preferredStyle: .Alert)
@@ -51,13 +52,24 @@ class MapLocatorVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelega
         presentViewController(alertaFotografia, animated: true, completion: nil)
     }
     
+    
+    @IBAction func compartir(sender: UIButton) {
+        var titulos : String = ""
+        if (self.ruta!.puntosEnLaRuta.count > 0) {
+            for punto in self.ruta!.puntosEnLaRuta {
+                titulos = titulos + " - " + punto.titulo
+            }
+        }
+        let tituloPuntos = [titulos]
+        let actividadRD = UIActivityViewController(activityItems: tituloPuntos, applicationActivities: nil)
+        self.presentViewController(actividadRD, animated: true, completion: nil)
+    }
+    
+    
     func iniciaRAG() {
-       // let latitude = 19.2854133
-       // let longitud = -99.13469229999998
         let delta = 0.05
         
         let puntosDeInteres = obtenAnotaciones(delta)
-        
         let arViewController = ARViewController()
         arViewController.debugEnabled = true
         arViewController.dataSource = self
