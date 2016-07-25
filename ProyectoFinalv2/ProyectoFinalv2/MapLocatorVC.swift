@@ -29,7 +29,6 @@ class MapLocatorVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelega
         
     }
     
-    
     @IBAction func tomarFoto() {
         if (self.selectedAnnotationTitle == nil || self.selectedAnnotationTitle == "") {
             let alertaErrorFotografia = UIAlertController(title: "Error", message: "Selecciona un Pin", preferredStyle: .Alert)
@@ -53,12 +52,11 @@ class MapLocatorVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelega
     }
     
     func iniciaRAG() {
-        let latitude = 19.2854133
-        let longitud = -99.13469229999998
+       // let latitude = 19.2854133
+       // let longitud = -99.13469229999998
         let delta = 0.05
-        let numeroElementos = 70
         
-        let puntosDeInteres = obtenAnotaciones(latitud: latitude, longitud: longitud, delta: delta, numeroDeElementos: numeroElementos)
+        let puntosDeInteres = obtenAnotaciones(delta)
         
         let arViewController = ARViewController()
         arViewController.debugEnabled = true
@@ -76,15 +74,17 @@ class MapLocatorVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelega
     
     }
     
-    private func obtenAnotaciones(latitud latitud:Double, longitud: Double, delta: Double, numeroDeElementos: Int)->Array<ARAnnotation> {
+    private func obtenAnotaciones(delta: Double)->Array<ARAnnotation> {
         var anotaciones: [ARAnnotation] = []
-        srand48(3)
-        for _ in 0 ..< numeroDeElementos {
-            let anotacion = ARAnnotation()
-            anotacion.location = self.obtenerPosiciones(latitud: latitud, longitud: longitud, delta: delta)
-            anotacion.title = "Punto de interes"
-            anotaciones.append(anotacion)
+        if (self.ruta!.puntosEnLaRuta.count > 0) {
+            for punto in self.ruta!.puntosEnLaRuta {
+                let anotacion = ARAnnotation()
+                anotacion.location = self.obtenerPosiciones(latitud: punto.anotacion.latitude, longitud: punto.anotacion.longitude, delta: delta)
+                anotacion.title = punto.titulo
+                anotaciones.append(anotacion)
+            }
         }
+        
         return anotaciones
     }
     
