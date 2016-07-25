@@ -73,6 +73,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="Idg-Sx-ISo" kind="show" id="aVH-N6-h3n"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -382,6 +385,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="2Wj-yr-TLd"/>
+        <segue reference="aVH-N6-h3n"/>
     </inferredMetricsTieBreakers>
 </document>

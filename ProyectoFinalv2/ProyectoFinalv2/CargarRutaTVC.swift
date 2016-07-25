@@ -102,14 +102,19 @@ class CargarRutaTVC: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        let mapLocation = segue.destinationViewController as! MapLocatorVC
+        let indexPath = self.tableView.indexPathForSelectedRow
+        let rutaCargada = self.rutas[indexPath!.row]
+        let ruta = Ruta(titulo: (rutaCargada.valueForKey("titulo") as? String)!,
+            descripcion: (rutaCargada.valueForKey("descripcion") as? String)!)
+        mapLocation.ruta = ruta
     }
-    */
 
 }
