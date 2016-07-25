@@ -11,7 +11,7 @@ import MapKit
 import CoreData
 import CoreLocation
 
-class MapLocatorVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class MapLocatorVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, ARDataSource {
     
     var ruta: Ruta?
     var selectedAnnotationTitle: String?
@@ -23,6 +23,12 @@ class MapLocatorVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelega
     
     private let locationManager = CLLocationManager()
     private let myPicker = UIImagePickerController()
+    
+    @IBAction func iniciaRA() {
+        iniciaRAG()
+        
+    }
+    
     
     @IBAction func tomarFoto() {
         if (self.selectedAnnotationTitle == nil || self.selectedAnnotationTitle == "") {
@@ -44,6 +50,61 @@ class MapLocatorVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelega
         }));
         
         presentViewController(alertaFotografia, animated: true, completion: nil)
+    }
+    
+    func iniciaRAG() {
+        let latitude = 19.2854133
+        let longitud = -99.13469229999998
+        let delta = 0.05
+        let numeroElementos = 70
+        
+        let puntosDeInteres = obtenAnotaciones(latitud: latitude, longitud: longitud, delta: delta, numeroDeElementos: numeroElementos)
+        
+        let arViewController = ARViewController()
+        arViewController.debugEnabled = true
+        arViewController.dataSource = self
+        arViewController.maxDistance = 0
+        arViewController.maxVisibleAnnotations = 100
+        arViewController.maxVerticalLevel = 5
+        arViewController.headingSmoothingFactor = 0.05
+        arViewController.trackingManager.userDistanceFilter = 25
+        arViewController.trackingManager.reloadDistanceFilter = 75
+        
+        arViewController.setAnnotations(puntosDeInteres)
+        self.presentViewController(arViewController, animated: true, completion: nil)
+        
+    
+    }
+    
+    private func obtenAnotaciones(latitud latitud:Double, longitud: Double, delta: Double, numeroDeElementos: Int)->Array<ARAnnotation> {
+        var anotaciones: [ARAnnotation] = []
+        srand48(3)
+        for _ in 0 ..< numeroDeElementos {
+            let anotacion = ARAnnotation()
+            anotacion.location = self.obtenerPosiciones(latitud: latitud, longitud: longitud, delta: delta)
+            anotacion.title = "Punto de interes"
+            anotaciones.append(anotacion)
+        }
+        return anotaciones
+    }
+    
+    private func obtenerPosiciones(latitud latitud: Double, longitud: Double, delta: Double)-> CLLocation {
+        var lat = latitud
+        var lon = longitud
+        
+        let latDelta = -(delta / 2) + drand48() * delta
+        let lonDelta = -(delta / 2) + drand48() * delta
+        lat = lat + latDelta
+        lon = lon + lonDelta
+        return CLLocation(latitude: lat, longitude: lon)
+    }
+    
+    func ar(arViewController: ARViewController, viewForAnnotation: ARAnnotation) -> ARAnnotationView {
+        let vista = TestAnnotationView()
+        vista.backgroundColor = UIColor.blackColor().colorWithAlphaComponent(0.5)
+        vista.frame = CGRect(x: 0, y: 0, width: 150, height: 60)
+        
+        return vista
     }
     
     override func viewWillAppear(animated: Bool) {

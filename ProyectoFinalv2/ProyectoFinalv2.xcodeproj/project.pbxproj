@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EE8EF29D1D46BC7D0028A2B4 /* TestAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8EF29C1D46BC7D0028A2B4 /* TestAnnotationView.swift */; };
 		EEDA3F5E1D3CE040009E6597 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDA3F5D1D3CE040009E6597 /* AppDelegate.swift */; };
 		EEDA3F601D3CE040009E6597 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDA3F5F1D3CE040009E6597 /* ViewController.swift */; };
 		EEDA3F631D3CE040009E6597 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEDA3F611D3CE040009E6597 /* Main.storyboard */; };
@@ -22,6 +23,19 @@
 		EEDA3F971D3D0C7E009E6597 /* QRReaderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDA3F961D3D0C7E009E6597 /* QRReaderVC.swift */; };
 		EEDA3F991D3D0C92009E6597 /* QRDisplayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDA3F981D3D0C92009E6597 /* QRDisplayVC.swift */; };
 		EEDA3F9B1D3D0CBF009E6597 /* QRNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDA3F9A1D3D0CBF009E6597 /* QRNavController.swift */; };
+		EEEF86F01D46B64D008F6464 /* ARAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEF86EB1D46B64D008F6464 /* ARAnnotation.swift */; };
+		EEEF86F11D46B64D008F6464 /* ARAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEF86EC1D46B64D008F6464 /* ARAnnotationView.swift */; };
+		EEEF86F21D46B64D008F6464 /* ARConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEF86ED1D46B64D008F6464 /* ARConfiguration.swift */; };
+		EEEF86F31D46B64D008F6464 /* ARTrackingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEF86EE1D46B64D008F6464 /* ARTrackingManager.swift */; };
+		EEEF86F41D46B64D008F6464 /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEF86EF1D46B64D008F6464 /* ARViewController.swift */; };
+		EEEF86F71D46B668008F6464 /* DebugMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEF86F61D46B668008F6464 /* DebugMapViewController.swift */; };
+		EEEF86FD1D46B6AD008F6464 /* DebugMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEEF86F91D46B6AD008F6464 /* DebugMapViewController.xib */; };
+		EEEF86FE1D46B6AD008F6464 /* hdar_close.png in Resources */ = {isa = PBXBuildFile; fileRef = EEEF86FA1D46B6AD008F6464 /* hdar_close.png */; };
+		EEEF86FF1D46B6AD008F6464 /* hdar_close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EEEF86FB1D46B6AD008F6464 /* hdar_close@2x.png */; };
+		EEEF87001D46B6AD008F6464 /* hdar_close@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EEEF86FC1D46B6AD008F6464 /* hdar_close@3x.png */; };
+		EEEF87021D46B97C008F6464 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEEF87011D46B97C008F6464 /* CoreLocation.framework */; };
+		EEEF87041D46B988008F6464 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEEF87031D46B988008F6464 /* CoreMotion.framework */; };
+		EEEF87061D46B99A008F6464 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEEF87051D46B99A008F6464 /* MapKit.framework */; };
 		EEF04F5A1D463AC400B17EFD /* CargarRutaTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF04F591D463AC400B17EFD /* CargarRutaTVC.swift */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +57,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EE8EF29C1D46BC7D0028A2B4 /* TestAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TestAnnotationView.swift; path = "../../../../../Downloads/HDAugmentedReality-master/HDAugmentedRealityDemo/TestAnnotationView.swift"; sourceTree = "<group>"; };
 		EEDA3F5A1D3CE040009E6597 /* ProyectoFinalv2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProyectoFinalv2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEDA3F5D1D3CE040009E6597 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EEDA3F5F1D3CE040009E6597 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -64,6 +79,19 @@
 		EEDA3F961D3D0C7E009E6597 /* QRReaderVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRReaderVC.swift; sourceTree = "<group>"; };
 		EEDA3F981D3D0C92009E6597 /* QRDisplayVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRDisplayVC.swift; sourceTree = "<group>"; };
 		EEDA3F9A1D3D0CBF009E6597 /* QRNavController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRNavController.swift; sourceTree = "<group>"; };
+		EEEF86EB1D46B64D008F6464 /* ARAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARAnnotation.swift; sourceTree = "<group>"; };
+		EEEF86EC1D46B64D008F6464 /* ARAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARAnnotationView.swift; sourceTree = "<group>"; };
+		EEEF86ED1D46B64D008F6464 /* ARConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARConfiguration.swift; sourceTree = "<group>"; };
+		EEEF86EE1D46B64D008F6464 /* ARTrackingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARTrackingManager.swift; sourceTree = "<group>"; };
+		EEEF86EF1D46B64D008F6464 /* ARViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
+		EEEF86F61D46B668008F6464 /* DebugMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugMapViewController.swift; sourceTree = "<group>"; };
+		EEEF86F91D46B6AD008F6464 /* DebugMapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DebugMapViewController.xib; sourceTree = "<group>"; };
+		EEEF86FA1D46B6AD008F6464 /* hdar_close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hdar_close.png; sourceTree = "<group>"; };
+		EEEF86FB1D46B6AD008F6464 /* hdar_close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hdar_close@2x.png"; sourceTree = "<group>"; };
+		EEEF86FC1D46B6AD008F6464 /* hdar_close@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hdar_close@3x.png"; sourceTree = "<group>"; };
+		EEEF87011D46B97C008F6464 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		EEEF87031D46B988008F6464 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		EEEF87051D46B99A008F6464 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		EEF04F591D463AC400B17EFD /* CargarRutaTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CargarRutaTVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -72,6 +100,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEEF87061D46B99A008F6464 /* MapKit.framework in Frameworks */,
+				EEEF87041D46B988008F6464 /* CoreMotion.framework in Frameworks */,
+				EEEF87021D46B97C008F6464 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +126,9 @@
 		EEDA3F511D3CE040009E6597 = {
 			isa = PBXGroup;
 			children = (
+				EEEF87051D46B99A008F6464 /* MapKit.framework */,
+				EEEF87031D46B988008F6464 /* CoreMotion.framework */,
+				EEEF87011D46B97C008F6464 /* CoreLocation.framework */,
 				EEDA3F5C1D3CE040009E6597 /* ProyectoFinalv2 */,
 				EEDA3F741D3CE040009E6597 /* ProyectoFinalv2Tests */,
 				EEDA3F7F1D3CE040009E6597 /* ProyectoFinalv2UITests */,
@@ -115,6 +149,8 @@
 		EEDA3F5C1D3CE040009E6597 /* ProyectoFinalv2 */ = {
 			isa = PBXGroup;
 			children = (
+				EEEF86F81D46B6A0008F6464 /* Resources */,
+				EEEF86EA1D46B613008F6464 /* Classes */,
 				EEDA3F5D1D3CE040009E6597 /* AppDelegate.swift */,
 				EEDA3F5F1D3CE040009E6597 /* ViewController.swift */,
 				EEDA3F611D3CE040009E6597 /* Main.storyboard */,
@@ -122,6 +158,7 @@
 				EEDA3F691D3CE040009E6597 /* LaunchScreen.storyboard */,
 				EEDA3F6C1D3CE040009E6597 /* Info.plist */,
 				EEDA3F641D3CE040009E6597 /* ProyectoFinalv2.xcdatamodeld */,
+				EE8EF29C1D46BC7D0028A2B4 /* TestAnnotationView.swift */,
 				EEDA3F8E1D3CF3D1009E6597 /* CrearRutaVC.swift */,
 				EEDA3F901D3CF561009E6597 /* Ruta.swift */,
 				EEDA3F921D3CF586009E6597 /* Punto.swift */,
@@ -150,6 +187,38 @@
 				EEDA3F821D3CE040009E6597 /* Info.plist */,
 			);
 			path = ProyectoFinalv2UITests;
+			sourceTree = "<group>";
+		};
+		EEEF86EA1D46B613008F6464 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				EEEF86F51D46B65D008F6464 /* Debug */,
+				EEEF86EB1D46B64D008F6464 /* ARAnnotation.swift */,
+				EEEF86EC1D46B64D008F6464 /* ARAnnotationView.swift */,
+				EEEF86ED1D46B64D008F6464 /* ARConfiguration.swift */,
+				EEEF86EE1D46B64D008F6464 /* ARTrackingManager.swift */,
+				EEEF86EF1D46B64D008F6464 /* ARViewController.swift */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		EEEF86F51D46B65D008F6464 /* Debug */ = {
+			isa = PBXGroup;
+			children = (
+				EEEF86F61D46B668008F6464 /* DebugMapViewController.swift */,
+			);
+			name = Debug;
+			sourceTree = "<group>";
+		};
+		EEEF86F81D46B6A0008F6464 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EEEF86F91D46B6AD008F6464 /* DebugMapViewController.xib */,
+				EEEF86FA1D46B6AD008F6464 /* hdar_close.png */,
+				EEEF86FB1D46B6AD008F6464 /* hdar_close@2x.png */,
+				EEEF86FC1D46B6AD008F6464 /* hdar_close@3x.png */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,8 +327,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				EEDA3F6B1D3CE040009E6597 /* LaunchScreen.storyboard in Resources */,
+				EEEF86FE1D46B6AD008F6464 /* hdar_close.png in Resources */,
+				EEEF87001D46B6AD008F6464 /* hdar_close@3x.png in Resources */,
 				EEDA3F681D3CE040009E6597 /* Assets.xcassets in Resources */,
 				EEDA3F631D3CE040009E6597 /* Main.storyboard in Resources */,
+				EEEF86FF1D46B6AD008F6464 /* hdar_close@2x.png in Resources */,
+				EEEF86FD1D46B6AD008F6464 /* DebugMapViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,14 +357,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEEF86F71D46B668008F6464 /* DebugMapViewController.swift in Sources */,
+				EE8EF29D1D46BC7D0028A2B4 /* TestAnnotationView.swift in Sources */,
 				EEDA3F931D3CF586009E6597 /* Punto.swift in Sources */,
 				EEDA3F911D3CF561009E6597 /* Ruta.swift in Sources */,
 				EEDA3F971D3D0C7E009E6597 /* QRReaderVC.swift in Sources */,
+				EEEF86F41D46B64D008F6464 /* ARViewController.swift in Sources */,
 				EEDA3F601D3CE040009E6597 /* ViewController.swift in Sources */,
 				EEDA3F9B1D3D0CBF009E6597 /* QRNavController.swift in Sources */,
+				EEEF86F21D46B64D008F6464 /* ARConfiguration.swift in Sources */,
+				EEEF86F31D46B64D008F6464 /* ARTrackingManager.swift in Sources */,
 				EEDA3F661D3CE040009E6597 /* ProyectoFinalv2.xcdatamodeld in Sources */,
 				EEDA3F951D3CF838009E6597 /* MapLocatorVC.swift in Sources */,
+				EEEF86F01D46B64D008F6464 /* ARAnnotation.swift in Sources */,
 				EEDA3F991D3D0C92009E6597 /* QRDisplayVC.swift in Sources */,
+				EEEF86F11D46B64D008F6464 /* ARAnnotationView.swift in Sources */,
 				EEDA3F8F1D3CF3D1009E6597 /* CrearRutaVC.swift in Sources */,
 				EEDA3F5E1D3CE040009E6597 /* AppDelegate.swift in Sources */,
 				EEF04F5A1D463AC400B17EFD /* CargarRutaTVC.swift in Sources */,
