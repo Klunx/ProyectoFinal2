@@ -36,6 +36,9 @@
                                 <state key="normal" title="Autor">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="Aes-qE-7ax" kind="show" id="clM-C3-ycY"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Eb-fK-gqH">
                                 <rect key="frame" x="20" y="112" width="335" height="45"/>
@@ -70,6 +73,48 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="148.5" y="1206.5"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Mva-zl-WDx">
+            <objects>
+                <viewController id="Aes-qE-7ax" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PR0-39-yQh"/>
+                        <viewControllerLayoutGuide type="bottom" id="jmg-KQ-tQI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oUK-BZ-6EY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DPq-df-qNU">
+                                <rect key="frame" x="0.0" y="615" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="action" id="Vij-h6-F28">
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="ss7-UI-dM5"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Programa realizado por: Fernando Renteria " textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="0Ws-nA-R2s">
+                                <rect key="frame" x="20" y="28" width="335" height="34"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Version: 1.05" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="xcD-aL-S7z">
+                                <rect key="frame" x="20" y="79" width="335" height="34"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rfH-aj-0FG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="148.5" y="2067.5"/>
         </scene>
         <!--Rutas-->
         <scene sceneID="sh8-tk-g31">
@@ -107,7 +152,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ktk-C5-nwX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="931.5" y="2030.5"/>
+            <point key="canvasLocation" x="1118.5" y="1206.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gOW-UR-N0K">
@@ -238,7 +283,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Odq-cC-94G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1297.5" y="1206.5"/>
+            <point key="canvasLocation" x="1118.5" y="2020.5"/>
         </scene>
         <!--Nav Controller-->
         <scene sceneID="gpf-4F-WqI">
@@ -256,7 +301,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="94d-DC-GK8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1865.5" y="1281.5"/>
+            <point key="canvasLocation" x="1601.5" y="2020.5"/>
         </scene>
         <!--Capturar QR-->
         <scene sceneID="nJI-gE-jEz">
@@ -281,7 +326,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="liL-IA-fci" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2548.5" y="577.5"/>
+            <point key="canvasLocation" x="2182.5" y="1782.5"/>
         </scene>
         <!--DisplayVC-->
         <scene sceneID="XUA-70-D5J">
@@ -292,11 +337,11 @@
                         <viewControllerLayoutGuide type="bottom" id="mTP-R8-VeQ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="3fe-0D-lxu">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2oA-Ml-0M5">
-                                <rect key="frame" x="20" y="72" width="335" height="47"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2oA-Ml-0M5">
+                                <rect key="frame" x="24" y="72" width="552" height="47"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="47" id="e0j-D2-ejK"/>
                                 </constraints>
@@ -304,8 +349,8 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ved-V9-bsP">
-                                <rect key="frame" x="0.0" y="127" width="375" height="540"/>
+                            <webView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ved-V9-bsP">
+                                <rect key="frame" x="0.0" y="127" width="600" height="540"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
                             </webView>
                         </subviews>
@@ -327,10 +372,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RxX-po-6sn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2263.5" y="1590.5"/>
+            <point key="canvasLocation" x="2182.5" y="2492.5"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="ss7-UI-dM5"/>
         <segue reference="Lcy-VG-Cfb"/>
     </inferredMetricsTieBreakers>
 </document>
