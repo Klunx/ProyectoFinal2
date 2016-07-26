@@ -15,7 +15,6 @@ class QRDisplayVC: UIViewController {
     @IBOutlet weak var lblAddress: UILabel!
     @IBOutlet weak var web: UIWebView!
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
