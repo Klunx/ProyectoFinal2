@@ -122,7 +122,7 @@ class MapLocatorVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelega
     override func viewWillAppear(animated: Bool) {
         
         if (self.ruta != nil) {
-            self.lblTituloRuta.text = self.ruta!.titulo
+            self.title = self.ruta!.titulo
         }
         if (self.selectedImage != nil) {
             self.guardarFotografia()
@@ -154,6 +154,7 @@ class MapLocatorVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelega
                 self.obtenerRuta()
             }
         }
+        
         longPressGesture()
     }
 

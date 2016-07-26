@@ -16,7 +16,6 @@
 		EEDA3F6B1D3CE040009E6597 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEDA3F691D3CE040009E6597 /* LaunchScreen.storyboard */; };
 		EEDA3F761D3CE040009E6597 /* ProyectoFinalv2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDA3F751D3CE040009E6597 /* ProyectoFinalv2Tests.swift */; };
 		EEDA3F811D3CE040009E6597 /* ProyectoFinalv2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDA3F801D3CE040009E6597 /* ProyectoFinalv2UITests.swift */; };
-		EEDA3F8F1D3CF3D1009E6597 /* CrearRutaVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDA3F8E1D3CF3D1009E6597 /* CrearRutaVC.swift */; };
 		EEDA3F911D3CF561009E6597 /* Ruta.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDA3F901D3CF561009E6597 /* Ruta.swift */; };
 		EEDA3F931D3CF586009E6597 /* Punto.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDA3F921D3CF586009E6597 /* Punto.swift */; };
 		EEDA3F951D3CF838009E6597 /* MapLocatorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDA3F941D3CF838009E6597 /* MapLocatorVC.swift */; };
@@ -72,7 +71,6 @@
 		EEDA3F7C1D3CE040009E6597 /* ProyectoFinalv2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProyectoFinalv2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEDA3F801D3CE040009E6597 /* ProyectoFinalv2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProyectoFinalv2UITests.swift; sourceTree = "<group>"; };
 		EEDA3F821D3CE040009E6597 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EEDA3F8E1D3CF3D1009E6597 /* CrearRutaVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrearRutaVC.swift; sourceTree = "<group>"; };
 		EEDA3F901D3CF561009E6597 /* Ruta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ruta.swift; sourceTree = "<group>"; };
 		EEDA3F921D3CF586009E6597 /* Punto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Punto.swift; sourceTree = "<group>"; };
 		EEDA3F941D3CF838009E6597 /* MapLocatorVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapLocatorVC.swift; sourceTree = "<group>"; };
@@ -159,7 +157,6 @@
 				EEDA3F6C1D3CE040009E6597 /* Info.plist */,
 				EEDA3F641D3CE040009E6597 /* ProyectoFinalv2.xcdatamodeld */,
 				EE8EF29C1D46BC7D0028A2B4 /* TestAnnotationView.swift */,
-				EEDA3F8E1D3CF3D1009E6597 /* CrearRutaVC.swift */,
 				EEDA3F901D3CF561009E6597 /* Ruta.swift */,
 				EEDA3F921D3CF586009E6597 /* Punto.swift */,
 				EEDA3F941D3CF838009E6597 /* MapLocatorVC.swift */,
@@ -372,7 +369,6 @@
 				EEEF86F01D46B64D008F6464 /* ARAnnotation.swift in Sources */,
 				EEDA3F991D3D0C92009E6597 /* QRDisplayVC.swift in Sources */,
 				EEEF86F11D46B64D008F6464 /* ARAnnotationView.swift in Sources */,
-				EEDA3F8F1D3CF3D1009E6597 /* CrearRutaVC.swift in Sources */,
 				EEDA3F5E1D3CE040009E6597 /* AppDelegate.swift in Sources */,
 				EEF04F5A1D463AC400B17EFD /* CargarRutaTVC.swift in Sources */,
 			);
