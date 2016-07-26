@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class CrearRutaVC: UIViewController,UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class CrearRutaVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var txtTitulo: UITextField!
     @IBOutlet weak var txtDesc: UITextView!

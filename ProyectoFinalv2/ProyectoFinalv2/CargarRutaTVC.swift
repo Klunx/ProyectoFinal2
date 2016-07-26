@@ -10,16 +10,159 @@ import UIKit
 import MapKit
 import CoreData
 
-class CargarRutaTVC: UITableViewController {
+class CargarRutaTVC: UITableViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     private var rutas = [NSManagedObject]()
     var contexto: NSManagedObjectContext? = nil
-   
+    var rutaTitulo : String = ""
+    var rutaDesc : String = ""
+    var rutaImage : UIImage? = nil
+    private let myPicker = UIImagePickerController()
+
+    @IBAction func agregarRuta(sender: AnyObject) {
+        agregarNombre()
+    }
+    
+    func agregarNombre() {
+        let alert = UIAlertController(title: "Nueva Ruta", message: "Nombra la ruta", preferredStyle: .Alert)
+        
+        let saveAction = UIAlertAction(title: "Save", style: .Default, handler: { (action:UIAlertAction) -> Void in
+            let textField = alert.textFields!.first
+            if (textField!.text! == "") {
+                self.alertaValidacion("Favor de ingresar titulo.")
+            } else {
+                self.rutaTitulo = textField!.text!
+                self.agregarDescripcion()
+            }
+        })
+        
+        let cancelAction = UIAlertAction(title: "Cancel",
+                                         style: .Default) { (action: UIAlertAction) -> Void in
+        }
+        
+        alert.addTextFieldWithConfigurationHandler {
+            (textField: UITextField) -> Void in
+        }
+        
+        alert.addAction(saveAction)
+        alert.addAction(cancelAction)
+        
+        presentViewController(alert, animated: true, completion: nil)
+    }
+    
+    func agregarDescripcion() {
+        let alert = UIAlertController(title: "Nueva Ruta", message: "Describe tu ruta", preferredStyle: .Alert)
+        let saveAction = UIAlertAction(title: "Save", style: .Default, handler: { (action:UIAlertAction) -> Void in
+            let textField = alert.textFields!.first
+            if (textField!.text! == "") {
+                self.alertaValidacion("Favor de ingresar una descripcion.")
+            } else {
+                self.rutaDesc = textField!.text!
+                if !UIImagePickerController.isSourceTypeAvailable(.Camera) {
+                    self.salvarRuta()
+                } else {
+                    self.agregarFoto()
+                }
+            }
+        })
+        
+        let cancelAction = UIAlertAction(title: "Cancel",
+                                         style: .Default) { (action: UIAlertAction) -> Void in
+        }
+        
+        alert.addTextFieldWithConfigurationHandler {
+            (textField: UITextField) -> Void in
+        }
+        
+        alert.addAction(saveAction)
+        alert.addAction(cancelAction)
+        
+        presentViewController(alert, animated: true, completion: nil)
+    }
+    
+    func agregarFoto() {
+        let alertaFotografia = UIAlertController(title: "Fuente", message: "Elige", preferredStyle: UIAlertControllerStyle.Alert);
+        alertaFotografia.addAction(UIAlertAction(title: "Camara", style: UIAlertActionStyle.Default, handler: {(action:UIAlertAction) in
+            self.obtenerFotografiaCamara()
+            
+        }));
+        alertaFotografia.addAction(UIAlertAction(title: "Album", style: UIAlertActionStyle.Default, handler: {(action:UIAlertAction) in
+            self.obtenerFotografiaCarrete()
+            
+        }));
+        
+        presentViewController(alertaFotografia, animated: true, completion: nil)
+    
+    }
+    
+    func obtenerFotografiaCamara() {
+        myPicker.sourceType = UIImagePickerControllerSourceType.Camera
+        presentViewController(myPicker, animated: true, completion: nil)
+    }
+    
+    func obtenerFotografiaCarrete() {
+        myPicker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+        presentViewController(myPicker, animated: true, completion: nil)
+    }
+    
+    func salvarRuta() {
+        
+        if (validarRuta()){
+            let nuevaRutaEntidad = NSEntityDescription.insertNewObjectForEntityForName("Ruta", inManagedObjectContext: self.contexto!)
+            
+            nuevaRutaEntidad.setValue(self.rutaTitulo, forKey: "titulo")
+            nuevaRutaEntidad.setValue(self.rutaDesc, forKey: "descripcion")
+            
+            if (self.rutaImage != nil) {
+                UIImageWriteToSavedPhotosAlbum(self.rutaImage!, nil, nil, nil)
+                nuevaRutaEntidad.setValue(UIImagePNGRepresentation(self.rutaImage!), forKey: "imagen")
+            }
+            
+            do {
+                rutas.append(nuevaRutaEntidad)
+                try self.contexto?.save()
+                self.tableView.reloadData()
+            }
+            catch {
+                
+            }
+
+        
+        }
+    
+    }
+    
+    func validarRuta()->Bool {
+        var validationFlag : Bool = true
+        let rutaEntidad = NSEntityDescription.entityForName("Ruta", inManagedObjectContext: self.contexto!)
+        let peticion = rutaEntidad?.managedObjectModel.fetchRequestFromTemplateWithName("obtenerRuta", substitutionVariables: ["titulo": self.rutaTitulo])
+        do {
+            let rutaEntidad2 = try self.contexto?.executeFetchRequest(peticion!)
+            if (rutaEntidad2?.count > 0) {
+                alertaValidacion("Una ruta con este titulo ya existe.")
+                validationFlag = false
+            }
+        }
+            
+        catch {
+            
+        }
+        
+        return validationFlag
+    }
+    
+    func alertaValidacion(mensaje : String) {
+        let alerta = UIAlertController(title: "Error", message: mensaje, preferredStyle: .Alert)
+        let accionOk = UIAlertAction(title: "Ok", style: .Default, handler: {accion in } )
+        alerta.addAction(accionOk)
+        self.presentViewController(alerta, animated: true, completion: nil)
+        
+    }
+    
     func cargarRutas() {
         self.contexto = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
         let fetchRequest = NSFetchRequest(entityName: "Ruta")
         
-        //3
         do {
             let results = try contexto!.executeFetchRequest(fetchRequest)
             rutas = results as! [NSManagedObject]
@@ -30,6 +173,8 @@ class CargarRutaTVC: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        myPicker.delegate = self
         cargarRutas()
 
         // Uncomment the following line to preserve selection between presentations
@@ -42,6 +187,16 @@ class CargarRutaTVC: UITableViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
+        rutaImage = image
+        self.salvarRuta()
+        picker.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func imagePickerControllerDidCancel(picker: UIImagePickerController) {
+        picker.dismissViewControllerAnimated(true, completion: nil)
     }
 
     // MARK: - Table view data source

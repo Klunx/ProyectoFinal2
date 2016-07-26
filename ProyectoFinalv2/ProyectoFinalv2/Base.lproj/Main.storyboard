@@ -21,8 +21,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qIB-A2-PmR">
-                                <rect key="frame" x="20" y="113" width="335" height="30"/>
-                                <color key="backgroundColor" red="0.41381908480020174" green="0.50905205223853722" blue="0.67533131544502623" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="20" y="28" width="152" height="131"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="131" id="VZv-PS-icQ"/>
+                                    <constraint firstAttribute="width" constant="152" id="wYd-jq-oml"/>
+                                </constraints>
                                 <state key="normal" title="Crea una nueva ruta">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -30,9 +34,29 @@
                                     <segue destination="LCQ-Cq-shX" kind="show" id="iFT-JZ-qZ2"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6XO-KN-G6T">
+                                <rect key="frame" x="20" y="324" width="335" height="45"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="1Nw-PX-x4z"/>
+                                </constraints>
+                                <state key="normal" title="Eventos">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cjh-uy-kdV">
+                                <rect key="frame" x="20" y="389" width="335" height="45"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="AkR-rZ-3kb"/>
+                                </constraints>
+                                <state key="normal" title="Autor">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Eb-fK-gqH">
-                                <rect key="frame" x="20" y="160" width="335" height="30"/>
-                                <color key="backgroundColor" red="0.41381908480000001" green="0.50905205220000005" blue="0.67533131540000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="190" y="28" width="165" height="132"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Rutas">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -41,14 +65,20 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.042805710233270351" green="0.084302708030726467" blue="0.43340968586387429" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="qIB-A2-PmR" firstAttribute="trailing" secondItem="0Eb-fK-gqH" secondAttribute="trailing" id="8JY-oz-3AJ"/>
-                            <constraint firstItem="qIB-A2-PmR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KvX-DB-Wmn"/>
-                            <constraint firstItem="qIB-A2-PmR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="4" id="OSi-0X-S0x"/>
-                            <constraint firstItem="0Eb-fK-gqH" firstAttribute="top" secondItem="qIB-A2-PmR" secondAttribute="bottom" constant="17" id="bdo-Hb-DMJ"/>
-                            <constraint firstItem="qIB-A2-PmR" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="93" id="qXn-cy-6AT"/>
-                            <constraint firstItem="qIB-A2-PmR" firstAttribute="leading" secondItem="0Eb-fK-gqH" secondAttribute="leading" id="zze-p6-FiC"/>
+                            <constraint firstItem="0Eb-fK-gqH" firstAttribute="trailing" secondItem="6XO-KN-G6T" secondAttribute="trailing" id="1mV-9f-eJh"/>
+                            <constraint firstItem="6XO-KN-G6T" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4eC-kA-cSk"/>
+                            <constraint firstItem="qIB-A2-PmR" firstAttribute="centerY" secondItem="0Eb-fK-gqH" secondAttribute="centerY" id="6DI-in-T4t"/>
+                            <constraint firstItem="qIB-A2-PmR" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="74K-fo-yS9"/>
+                            <constraint firstItem="0Eb-fK-gqH" firstAttribute="leading" secondItem="qIB-A2-PmR" secondAttribute="trailing" constant="18" id="86C-ws-fdO"/>
+                            <constraint firstItem="6XO-KN-G6T" firstAttribute="leading" secondItem="cjh-uy-kdV" secondAttribute="leading" id="Gdd-70-oO0"/>
+                            <constraint firstItem="6XO-KN-G6T" firstAttribute="trailing" secondItem="cjh-uy-kdV" secondAttribute="trailing" id="JcZ-H6-fnm"/>
+                            <constraint firstItem="qIB-A2-PmR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="4" id="VFW-GN-d32"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="cjh-uy-kdV" secondAttribute="bottom" constant="233" id="cmc-Ah-Tlh"/>
+                            <constraint firstItem="qIB-A2-PmR" firstAttribute="leading" secondItem="6XO-KN-G6T" secondAttribute="leading" id="vha-Lt-AEN"/>
+                            <constraint firstItem="qIB-A2-PmR" firstAttribute="top" secondItem="0Eb-fK-gqH" secondAttribute="top" id="xKW-fA-L8m"/>
+                            <constraint firstItem="cjh-uy-kdV" firstAttribute="top" secondItem="6XO-KN-G6T" secondAttribute="bottom" constant="20" id="yST-Ly-3eQ"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
@@ -83,7 +113,13 @@
                             <outlet property="delegate" destination="3bL-rh-1g8" id="JHV-Ph-wOb"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Rutas" id="Cvc-8e-BIM"/>
+                    <navigationItem key="navigationItem" title="Rutas" id="Cvc-8e-BIM">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="bNt-vU-m5a">
+                            <connections>
+                                <action selector="agregarRuta:" destination="3bL-rh-1g8" id="EXs-q4-iz7"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ktk-C5-nwX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
