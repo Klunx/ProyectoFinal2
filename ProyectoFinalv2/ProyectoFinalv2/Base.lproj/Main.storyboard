@@ -179,10 +179,10 @@
                         <viewControllerLayoutGuide type="bottom" id="yMs-MP-byU"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="twk-TD-Vpe">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e7o-t8-Ro2">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e7o-t8-Ro2">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="jdz-Jg-e7s"/>
@@ -191,7 +191,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hgk-7s-35k">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hgk-7s-35k">
                                 <rect key="frame" x="20" y="610" width="61" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="s0f-Ur-i3m"/>
@@ -201,7 +201,7 @@
                                     <segue destination="dkV-Ds-8L8" kind="show" identifier="capturarQR" id="1mR-Gr-RLK"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uh9-rn-DfS">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uh9-rn-DfS">
                                 <rect key="frame" x="173" y="610" width="51" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="51" id="R4A-hc-8LY"/>
@@ -211,7 +211,7 @@
                                     <segue destination="BYZ-38-t0r" kind="showDetail" id="vwd-vH-km9"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="45o-V3-Yg5">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="45o-V3-Yg5">
                                 <rect key="frame" x="248" y="610" width="46" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="46" id="PfI-Fo-6AW"/>
@@ -221,7 +221,7 @@
                                     <action selector="iniciaRA" destination="Idg-Sx-ISo" eventType="touchUpInside" id="awo-ed-Huv"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6oD-mI-Tyk">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6oD-mI-Tyk">
                                 <rect key="frame" x="96" y="610" width="59" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="59" id="USt-3l-cYy"/>
@@ -231,7 +231,7 @@
                                     <action selector="tomarFoto" destination="Idg-Sx-ISo" eventType="touchUpInside" id="Lr6-hC-FCs"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NVB-v9-ylQ">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NVB-v9-ylQ">
                                 <rect key="frame" x="309" y="610" width="46" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="46" id="YeW-5H-wwK"/>
@@ -241,7 +241,7 @@
                                     <action selector="compartir:" destination="Idg-Sx-ISo" eventType="touchUpInside" id="NGf-LL-cJZ"/>
                                 </connections>
                             </button>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="RZT-1r-DrV">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="RZT-1r-DrV">
                                 <rect key="frame" x="0.0" y="58" width="375" height="544"/>
                             </mapView>
                         </subviews>
@@ -312,7 +312,7 @@
                         <viewControllerLayoutGuide type="bottom" id="nDb-gL-i4H"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="EaT-Sc-mEc">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
