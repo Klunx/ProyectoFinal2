@@ -10,6 +10,13 @@
 		EE05EBB01D4E410B0013DBDF /* AgregarLibroTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE05EBAF1D4E410B0013DBDF /* AgregarLibroTVC.swift */; };
 		EE05EBB21D4E412A0013DBDF /* Libro.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE05EBB11D4E412A0013DBDF /* Libro.swift */; };
 		EE05EBB61D4E44D30013DBDF /* DetailLibroVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE05EBB51D4E44D30013DBDF /* DetailLibroVC.swift */; };
+		EE2E25E81D4E584D001910BF /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE2E25E61D4E584D001910BF /* Interface.storyboard */; };
+		EE2E25EA1D4E584D001910BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE2E25E91D4E584D001910BF /* Assets.xcassets */; };
+		EE2E25F11D4E584D001910BF /* ProyectoFinalv2AW Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = EE2E25F01D4E584D001910BF /* ProyectoFinalv2AW Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		EE2E25F61D4E584D001910BF /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2E25F51D4E584D001910BF /* InterfaceController.swift */; };
+		EE2E25F81D4E584D001910BF /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2E25F71D4E584D001910BF /* ExtensionDelegate.swift */; };
+		EE2E25FA1D4E584D001910BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE2E25F91D4E584D001910BF /* Assets.xcassets */; };
+		EE2E25FF1D4E584D001910BF /* ProyectoFinalv2AW.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = EE2E25E41D4E584D001910BF /* ProyectoFinalv2AW.app */; };
 		EE8EF29D1D46BC7D0028A2B4 /* TestAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8EF29C1D46BC7D0028A2B4 /* TestAnnotationView.swift */; };
 		EEDA3F5E1D3CE040009E6597 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDA3F5D1D3CE040009E6597 /* AppDelegate.swift */; };
 		EEDA3F601D3CE040009E6597 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDA3F5F1D3CE040009E6597 /* ViewController.swift */; };
@@ -42,6 +49,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		EE2E25F21D4E584D001910BF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EEDA3F521D3CE040009E6597 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EE2E25EF1D4E584D001910BF;
+			remoteInfo = "ProyectoFinalv2AW Extension";
+		};
+		EE2E25FC1D4E584D001910BF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EEDA3F521D3CE040009E6597 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EE2E25E31D4E584D001910BF;
+			remoteInfo = ProyectoFinalv2AW;
+		};
 		EEDA3F721D3CE040009E6597 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EEDA3F521D3CE040009E6597 /* Project object */;
@@ -58,10 +79,44 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		EE2E25FE1D4E584D001910BF /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				EE2E25FF1D4E584D001910BF /* ProyectoFinalv2AW.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE2E26051D4E584E001910BF /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				EE2E25F11D4E584D001910BF /* ProyectoFinalv2AW Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		EE05EBAF1D4E410B0013DBDF /* AgregarLibroTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgregarLibroTVC.swift; sourceTree = "<group>"; };
 		EE05EBB11D4E412A0013DBDF /* Libro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Libro.swift; sourceTree = "<group>"; };
 		EE05EBB51D4E44D30013DBDF /* DetailLibroVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailLibroVC.swift; sourceTree = "<group>"; };
+		EE2E25E41D4E584D001910BF /* ProyectoFinalv2AW.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProyectoFinalv2AW.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE2E25E71D4E584D001910BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		EE2E25E91D4E584D001910BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EE2E25EB1D4E584D001910BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE2E25F01D4E584D001910BF /* ProyectoFinalv2AW Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "ProyectoFinalv2AW Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE2E25F51D4E584D001910BF /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		EE2E25F71D4E584D001910BF /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		EE2E25F91D4E584D001910BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EE2E25FB1D4E584D001910BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EE8EF29C1D46BC7D0028A2B4 /* TestAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TestAnnotationView.swift; path = "../../../../../Downloads/HDAugmentedReality-master/HDAugmentedRealityDemo/TestAnnotationView.swift"; sourceTree = "<group>"; };
 		EEDA3F5A1D3CE040009E6597 /* ProyectoFinalv2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProyectoFinalv2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEDA3F5D1D3CE040009E6597 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -100,6 +155,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		EE2E25ED1D4E584D001910BF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EEDA3F571D3CE040009E6597 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -127,6 +189,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EE2E25E51D4E584D001910BF /* ProyectoFinalv2AW */ = {
+			isa = PBXGroup;
+			children = (
+				EE2E25E61D4E584D001910BF /* Interface.storyboard */,
+				EE2E25E91D4E584D001910BF /* Assets.xcassets */,
+				EE2E25EB1D4E584D001910BF /* Info.plist */,
+			);
+			path = ProyectoFinalv2AW;
+			sourceTree = "<group>";
+		};
+		EE2E25F41D4E584D001910BF /* ProyectoFinalv2AW Extension */ = {
+			isa = PBXGroup;
+			children = (
+				EE2E25F51D4E584D001910BF /* InterfaceController.swift */,
+				EE2E25F71D4E584D001910BF /* ExtensionDelegate.swift */,
+				EE2E25F91D4E584D001910BF /* Assets.xcassets */,
+				EE2E25FB1D4E584D001910BF /* Info.plist */,
+			);
+			path = "ProyectoFinalv2AW Extension";
+			sourceTree = "<group>";
+		};
 		EEDA3F511D3CE040009E6597 = {
 			isa = PBXGroup;
 			children = (
@@ -136,6 +219,8 @@
 				EEDA3F5C1D3CE040009E6597 /* ProyectoFinalv2 */,
 				EEDA3F741D3CE040009E6597 /* ProyectoFinalv2Tests */,
 				EEDA3F7F1D3CE040009E6597 /* ProyectoFinalv2UITests */,
+				EE2E25E51D4E584D001910BF /* ProyectoFinalv2AW */,
+				EE2E25F41D4E584D001910BF /* ProyectoFinalv2AW Extension */,
 				EEDA3F5B1D3CE040009E6597 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -146,6 +231,8 @@
 				EEDA3F5A1D3CE040009E6597 /* ProyectoFinalv2.app */,
 				EEDA3F711D3CE040009E6597 /* ProyectoFinalv2Tests.xctest */,
 				EEDA3F7C1D3CE040009E6597 /* ProyectoFinalv2UITests.xctest */,
+				EE2E25E41D4E584D001910BF /* ProyectoFinalv2AW.app */,
+				EE2E25F01D4E584D001910BF /* ProyectoFinalv2AW Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -230,6 +317,40 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		EE2E25E31D4E584D001910BF /* ProyectoFinalv2AW */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE2E26061D4E584E001910BF /* Build configuration list for PBXNativeTarget "ProyectoFinalv2AW" */;
+			buildPhases = (
+				EE2E25E21D4E584D001910BF /* Resources */,
+				EE2E26051D4E584E001910BF /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EE2E25F31D4E584D001910BF /* PBXTargetDependency */,
+			);
+			name = ProyectoFinalv2AW;
+			productName = ProyectoFinalv2AW;
+			productReference = EE2E25E41D4E584D001910BF /* ProyectoFinalv2AW.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		EE2E25EF1D4E584D001910BF /* ProyectoFinalv2AW Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE2E26041D4E584E001910BF /* Build configuration list for PBXNativeTarget "ProyectoFinalv2AW Extension" */;
+			buildPhases = (
+				EE2E25EC1D4E584D001910BF /* Sources */,
+				EE2E25ED1D4E584D001910BF /* Frameworks */,
+				EE2E25EE1D4E584D001910BF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ProyectoFinalv2AW Extension";
+			productName = "ProyectoFinalv2AW Extension";
+			productReference = EE2E25F01D4E584D001910BF /* ProyectoFinalv2AW Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
 		EEDA3F591D3CE040009E6597 /* ProyectoFinalv2 */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = EEDA3F851D3CE040009E6597 /* Build configuration list for PBXNativeTarget "ProyectoFinalv2" */;
@@ -237,10 +358,12 @@
 				EEDA3F561D3CE040009E6597 /* Sources */,
 				EEDA3F571D3CE040009E6597 /* Frameworks */,
 				EEDA3F581D3CE040009E6597 /* Resources */,
+				EE2E25FE1D4E584D001910BF /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				EE2E25FD1D4E584D001910BF /* PBXTargetDependency */,
 			);
 			name = ProyectoFinalv2;
 			productName = ProyectoFinalv2;
@@ -293,6 +416,14 @@
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Fernando Renteria Correa";
 				TargetAttributes = {
+					EE2E25E31D4E584D001910BF = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = YHR45B9REA;
+					};
+					EE2E25EF1D4E584D001910BF = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = YHR45B9REA;
+					};
 					EEDA3F591D3CE040009E6597 = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = YHR45B9REA;
@@ -323,11 +454,30 @@
 				EEDA3F591D3CE040009E6597 /* ProyectoFinalv2 */,
 				EEDA3F701D3CE040009E6597 /* ProyectoFinalv2Tests */,
 				EEDA3F7B1D3CE040009E6597 /* ProyectoFinalv2UITests */,
+				EE2E25E31D4E584D001910BF /* ProyectoFinalv2AW */,
+				EE2E25EF1D4E584D001910BF /* ProyectoFinalv2AW Extension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		EE2E25E21D4E584D001910BF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE2E25EA1D4E584D001910BF /* Assets.xcassets in Resources */,
+				EE2E25E81D4E584D001910BF /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE2E25EE1D4E584D001910BF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE2E25FA1D4E584D001910BF /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EEDA3F581D3CE040009E6597 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -359,6 +509,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		EE2E25EC1D4E584D001910BF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE2E25F81D4E584D001910BF /* ExtensionDelegate.swift in Sources */,
+				EE2E25F61D4E584D001910BF /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EEDA3F561D3CE040009E6597 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -405,6 +564,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		EE2E25F31D4E584D001910BF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EE2E25EF1D4E584D001910BF /* ProyectoFinalv2AW Extension */;
+			targetProxy = EE2E25F21D4E584D001910BF /* PBXContainerItemProxy */;
+		};
+		EE2E25FD1D4E584D001910BF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EE2E25E31D4E584D001910BF /* ProyectoFinalv2AW */;
+			targetProxy = EE2E25FC1D4E584D001910BF /* PBXContainerItemProxy */;
+		};
 		EEDA3F731D3CE040009E6597 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = EEDA3F591D3CE040009E6597 /* ProyectoFinalv2 */;
@@ -418,6 +587,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		EE2E25E61D4E584D001910BF /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EE2E25E71D4E584D001910BF /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
 		EEDA3F611D3CE040009E6597 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -437,6 +614,72 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		EE2E26001D4E584E001910BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				IBSC_MODULE = ProyectoFinalv2AW_Extension;
+				INFOPLIST_FILE = ProyectoFinalv2AW/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.au.klunx.ProyectoFinalv2.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Debug;
+		};
+		EE2E26011D4E584E001910BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				IBSC_MODULE = ProyectoFinalv2AW_Extension;
+				INFOPLIST_FILE = ProyectoFinalv2AW/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.au.klunx.ProyectoFinalv2.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Release;
+		};
+		EE2E26021D4E584E001910BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "ProyectoFinalv2AW Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.au.klunx.ProyectoFinalv2.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Debug;
+		};
+		EE2E26031D4E584E001910BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "ProyectoFinalv2AW Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.au.klunx.ProyectoFinalv2.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Release;
+		};
 		EEDA3F831D3CE040009E6597 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -599,6 +842,22 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		EE2E26041D4E584E001910BF /* Build configuration list for PBXNativeTarget "ProyectoFinalv2AW Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE2E26021D4E584E001910BF /* Debug */,
+				EE2E26031D4E584E001910BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		EE2E26061D4E584E001910BF /* Build configuration list for PBXNativeTarget "ProyectoFinalv2AW" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE2E26001D4E584E001910BF /* Debug */,
+				EE2E26011D4E584E001910BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		EEDA3F551D3CE040009E6597 /* Build configuration list for PBXProject "ProyectoFinalv2" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

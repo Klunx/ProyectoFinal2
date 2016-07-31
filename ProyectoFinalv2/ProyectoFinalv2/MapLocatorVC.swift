@@ -10,13 +10,15 @@ import UIKit
 import MapKit
 import CoreData
 import CoreLocation
+import WatchConnectivity
 
-class MapLocatorVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, ARDataSource {
+class MapLocatorVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, ARDataSource, WCSessionDelegate {
     
     var ruta: Ruta?
     var selectedAnnotationTitle: String?
     var selectedImage : UIImage?
     var contexto: NSManagedObjectContext? = nil
+    var session : WCSession!
     
     @IBOutlet weak var lblTituloRuta: UILabel!
     @IBOutlet weak var mapa: MKMapView!
@@ -339,7 +341,26 @@ class MapLocatorVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelega
         let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.001, longitudeDelta: 0.001))
         self.mapa.setRegion(region, animated: true)
         self.locationManager.stopUpdatingLocation()
+        sendData()
     }
+
+    func sendData() {
+        if (WCSession.isSupported()) {
+            session = WCSession.defaultSession()
+            session.delegate = self
+            session.activateSession()
+        }
+        var locationsDic = [String: String]()
+        for annotation in self.ruta!.puntosEnLaRuta {
+            locationsDic[String(annotation.anotacion.latitude)] = String(annotation.anotacion.longitude)
+        }
+        do {
+            try session.updateApplicationContext(locationsDic)
+        } catch {
+            print("error")
+        }
+    }
+
 
     func mapView(mapView: MKMapView, rendererForOverlay overlay: MKOverlay) -> MKOverlayRenderer {
         let renderer = MKPolylineRenderer(overlay: overlay)

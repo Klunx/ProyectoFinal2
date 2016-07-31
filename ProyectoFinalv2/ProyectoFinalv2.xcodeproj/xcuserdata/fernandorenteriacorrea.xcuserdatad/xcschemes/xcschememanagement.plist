@@ -9,9 +9,19 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>ProyectoFinalv2AW.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>EE2E25E31D4E584D001910BF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>EEDA3F591D3CE040009E6597</key>
 		<dict>
 			<key>primary</key>
