@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EE05EBB01D4E410B0013DBDF /* AgregarLibroTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE05EBAF1D4E410B0013DBDF /* AgregarLibroTVC.swift */; };
+		EE05EBB21D4E412A0013DBDF /* Libro.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE05EBB11D4E412A0013DBDF /* Libro.swift */; };
+		EE05EBB61D4E44D30013DBDF /* DetailLibroVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE05EBB51D4E44D30013DBDF /* DetailLibroVC.swift */; };
 		EE8EF29D1D46BC7D0028A2B4 /* TestAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8EF29C1D46BC7D0028A2B4 /* TestAnnotationView.swift */; };
 		EEDA3F5E1D3CE040009E6597 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDA3F5D1D3CE040009E6597 /* AppDelegate.swift */; };
 		EEDA3F601D3CE040009E6597 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDA3F5F1D3CE040009E6597 /* ViewController.swift */; };
@@ -56,6 +59,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EE05EBAF1D4E410B0013DBDF /* AgregarLibroTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgregarLibroTVC.swift; sourceTree = "<group>"; };
+		EE05EBB11D4E412A0013DBDF /* Libro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Libro.swift; sourceTree = "<group>"; };
+		EE05EBB51D4E44D30013DBDF /* DetailLibroVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailLibroVC.swift; sourceTree = "<group>"; };
 		EE8EF29C1D46BC7D0028A2B4 /* TestAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TestAnnotationView.swift; path = "../../../../../Downloads/HDAugmentedReality-master/HDAugmentedRealityDemo/TestAnnotationView.swift"; sourceTree = "<group>"; };
 		EEDA3F5A1D3CE040009E6597 /* ProyectoFinalv2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProyectoFinalv2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEDA3F5D1D3CE040009E6597 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -164,6 +170,9 @@
 				EEDA3F981D3D0C92009E6597 /* QRDisplayVC.swift */,
 				EEDA3F9A1D3D0CBF009E6597 /* QRNavController.swift */,
 				EEF04F591D463AC400B17EFD /* CargarRutaTVC.swift */,
+				EE05EBAF1D4E410B0013DBDF /* AgregarLibroTVC.swift */,
+				EE05EBB11D4E412A0013DBDF /* Libro.swift */,
+				EE05EBB51D4E44D30013DBDF /* DetailLibroVC.swift */,
 			);
 			path = ProyectoFinalv2;
 			sourceTree = "<group>";
@@ -356,6 +365,7 @@
 			files = (
 				EEEF86F71D46B668008F6464 /* DebugMapViewController.swift in Sources */,
 				EE8EF29D1D46BC7D0028A2B4 /* TestAnnotationView.swift in Sources */,
+				EE05EBB61D4E44D30013DBDF /* DetailLibroVC.swift in Sources */,
 				EEDA3F931D3CF586009E6597 /* Punto.swift in Sources */,
 				EEDA3F911D3CF561009E6597 /* Ruta.swift in Sources */,
 				EEDA3F971D3D0C7E009E6597 /* QRReaderVC.swift in Sources */,
@@ -364,12 +374,14 @@
 				EEDA3F9B1D3D0CBF009E6597 /* QRNavController.swift in Sources */,
 				EEEF86F21D46B64D008F6464 /* ARConfiguration.swift in Sources */,
 				EEEF86F31D46B64D008F6464 /* ARTrackingManager.swift in Sources */,
+				EE05EBB21D4E412A0013DBDF /* Libro.swift in Sources */,
 				EEDA3F661D3CE040009E6597 /* ProyectoFinalv2.xcdatamodeld in Sources */,
 				EEDA3F951D3CF838009E6597 /* MapLocatorVC.swift in Sources */,
 				EEEF86F01D46B64D008F6464 /* ARAnnotation.swift in Sources */,
 				EEDA3F991D3D0C92009E6597 /* QRDisplayVC.swift in Sources */,
 				EEEF86F11D46B64D008F6464 /* ARAnnotationView.swift in Sources */,
 				EEDA3F5E1D3CE040009E6597 /* AppDelegate.swift in Sources */,
+				EE05EBB01D4E410B0013DBDF /* AgregarLibroTVC.swift in Sources */,
 				EEF04F5A1D463AC400B17EFD /* CargarRutaTVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
