@@ -151,8 +151,9 @@ class MapLocatorVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelega
             for punto in self.ruta!.puntosEnLaRuta {
                 let elementoMapa = self.convertirMKMapItem(punto)
                 self.anotaPunto(elementoMapa)
-                self.obtenerRuta()
+              //  self.obtenerRuta()
             }
+            trazarRutaCompleta() 
         }
         
         longPressGesture()
@@ -291,6 +292,34 @@ class MapLocatorVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelega
                 }
             })
             
+        }
+    }
+    
+    func trazarRutaCompleta() {
+        let elementos = self.ruta!.puntosEnLaRuta.count
+        if (elementos > 1) {
+            var index : Int = 1
+            for punto in self.ruta!.puntosEnLaRuta {
+                if (index == elementos) {
+                    break;
+                }
+                let solicitud = MKDirectionsRequest()
+                let locMark = MKPlacemark(coordinate: punto.anotacion, addressDictionary: nil)
+                let destMark = MKPlacemark(coordinate: self.ruta!.puntosEnLaRuta[index].anotacion, addressDictionary: nil)
+                solicitud.source = MKMapItem(placemark: locMark)
+                solicitud.destination = MKMapItem(placemark: destMark)
+                solicitud.transportType = .Walking
+                let indicaciones = MKDirections(request: solicitud)
+                indicaciones.calculateDirectionsWithCompletionHandler({
+                    (respuesta: MKDirectionsResponse?, error: NSError?) in
+                    if error != nil {
+                        print("Error al obtener la ruta")
+                    } else {
+                        self.muestraRuta(respuesta!)
+                    }
+                })
+                index += 1
+            }
         }
     }
     
